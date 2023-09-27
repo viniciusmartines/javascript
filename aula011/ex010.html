@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    <label for="txtvel">Velocidade do carro (Km/h):</label>
+    <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verify" onclick="verify()">
+    <div id="res"></div><br><br>
+
+    <h1>Nacionalidade</h1>
+    <label for="txtnac">Você mora em que país?</label>
+    <input type="text" id="txtnac" name="txtnac">
+    <input type="button" value="Verificar" onclick="nacao()">
+    <div id="nacio"></div>
+
+    <script>
+        function verify(){
+        let txt = document.getElementById('txtvel')
+        let res = document.querySelector('div#res')
+        let velo = Number(txt.value)
+        res.innerHTML = `<p>Sua velocidade atual é de <strong>${velo}Km/h</strong></p>`
+            if (velo > 60) {
+               res.innerHTML += `<p>Você esta sendo <strong>MULTADO!</strong> por excesso de velocidade</p>`
+            }
+        res.innerHTML += `<p>Dirija <strong>sempre</strong> com cinto de segurança!</p>`
+        }
+
+        function nacao() {
+        let txt = document.getElementById('txtnac')
+        let pais = txtnac.value
+        let res = document.getElementById('nacio')
+        res.innerHTML = `Vivendo em ${pais}`
+            if (pais == "Brasil") {
+                res.innerHTML += `, você é Brasileiro`
+            } else {
+                res.innerHTML += `, você é Estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>
