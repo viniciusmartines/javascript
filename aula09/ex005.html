@@ -6,13 +6,36 @@
     <title>First steps with DOM</title>
     <style>
         body {
-            background-color: blue;
+            background-color: rgb(84, 84, 255);
+            color: white;
+            font: normal 1.5em Arial;
         }
     </style>
 </head>
 <body>
     <h1>Iniciating studies with DOM</h1>
     <p>Here it goes the result</p>
-    <div>Click on me</div>
+    <p>Learning how to use <strong>DOM</strong> in JavaScript</p>
+    <div id="msg" name="tlg">Click on me</div>
+    <script>
+        let corpo = document.body
+        let p1 = document.getElementsByTagName('p')[1]
+        p1.style.color = 'red'
+        document.write('Esta escrito assim ' + p1.innerHTML) 
+
+        /*
+        let d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'I am waiting...'
+        */
+
+        /*
+        let d = document.getElementsByName('tlg')[0]
+        d.innerText = 'ta ligadooo!'
+        */
+
+        let d = document.querySelectorAll('p')
+        d[0].style.color = 'black'
+    </script>
 </body>
 </html>
