@@ -12,14 +12,22 @@
     </header>
     <section>
         <div>
-            <label for="txtano">Ano de Nascimento: </label>
-            <input type="number" name="txtano" id="txtano">
+            <p>
+                <label for="txtano">Ano de Nascimento: </label>
+                <input type="number" name="txtano" id="txtano">
+            </p>
             <p>Sexo: 
-                <input type="radio" name="sex" id="masc">
+                <input type="radio" name="sex" id="masc" checked>
                 <label for="masc">Masculino</label>
+                <input type="radio" name="sex" id="femi">
+                <label for="femi">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verify" onclick="verificar()">
+            </p>
         </div>
         <div id="resp">
-
+            <p>Preencha os dados acima para ver o resultado!</p>
         </div>
     </section>
     <footer>

@@ -22,8 +22,15 @@ section {
     padding: 15px;
     width: 500px;
     margin: auto;
-    text-align: center;
     box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.349);
+}
+
+input {
+    margin: 10px 0px;
+}
+
+input[type=button] {
+    padding: 0px 10px;
 }
 
 footer {
